@@ -10,9 +10,7 @@ import java.io.Serializable;
  * @author qwang028
  *
  */
-public class BidLogTT implements Serializable{
-  
-    private static final long serialVersionUID = -3012027079030559912L;
+public class BidLogST implements Serializable{
 	
 	private String bidId; 	              //	c0550000008e5a94ac18823d6f275121
 	private String timestamp ;	          //	20130218134701883
@@ -21,7 +19,7 @@ public class BidLogTT implements Serializable{
 	private String ipAddress ;	          //	119.163.222.*
 	private int region;                   //	146
 	private int city;                     //	147
-	private int adExchange;               //	2 1AdX (Google DoubleClick AdX), 2TANX (Alibaba), and 3Tencent (Tencent)
+	private int adExchange;               //	2 AdX (Google DoubleClick AdX), TANX (Alibaba), Baidu(Baidu),Youku(Youku),Tencent (Tencent),Amx(Google Mobile).
 	private String domain ;               //	e80f4ec7f5bfbc9ca416a8c01cd1a049
 	private String url;                   //	hz55b000008e5a94ac18823d6f275121
 	private String anonymousURLID ;       //	Null
@@ -33,6 +31,8 @@ public class BidLogTT implements Serializable{
 	private int adSlotFloorPrice;         //	(RMB/CPM) (*)	0
 	private String creativeID;            //	f80f4ec7f5bfbc9ca416a8c01cd1a049
 	private int biddingPrice;		      //    300
+	private int advertiserID;             //    2345
+	private String userTags;               //    null
 	
 	public String getBidId() {
 		return bidId;
@@ -148,10 +148,16 @@ public class BidLogTT implements Serializable{
 	public void setBiddingPrice(int biddingPrice) {
 		this.biddingPrice = biddingPrice;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public int getAdvertiserID() {
+		return advertiserID;
 	}
-	
-	
-	
+	public void setAdvertiserID(int advertiserID) {
+		this.advertiserID = advertiserID;
+	}
+	public String getUserTags() {
+		return userTags;
+	}
+	public void setUserTags(String userTags) {
+		this.userTags = userTags;
+	}
 }

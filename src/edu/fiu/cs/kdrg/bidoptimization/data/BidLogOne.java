@@ -11,19 +11,17 @@ import java.io.Serializable;
  */
 public class BidLogOne implements Serializable{
   
-    private static final long serialVersionUID = -3012027079030559912L;
-	
 	private String bidId; 	              //	c0550000008e5a94ac18823d6f275121
-	private String timestamp ;	          //	20130218134701883
-	private String ipinyouId ;	          //	dF_5qwD1UDI
+	private String timestamp;	          //	20130218134701883
+	private String ipinyouId;	          //	dF_5qwD1UDI
 	private String userAgent;	          //    Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
-	private String ipAddress ;	          //	119.163.222.*
+	private String ipAddress;	          //	119.163.222.*
 	private int region;                   //	146
 	private int city;                     //	147
 	private int adExchange;               //	2 1AdX (Google DoubleClick AdX), 2TANX (Alibaba), and 3Tencent (Tencent)
 	private String domain ;               //	e80f4ec7f5bfbc9ca416a8c01cd1a049
 	private String url;                   //	hz55b000008e5a94ac18823d6f275121
-	private String anonymousURLID ;       //	Null
+	private String anonymousURLID;        //	Null
 	private String adSlotID;              //	mm_10982364_973726_9023493
 	private int adSlotWidth;              //	300
 	private int adSlotHeight;             //	250
@@ -147,10 +145,4 @@ public class BidLogOne implements Serializable{
 	public void setBiddingPrice(int biddingPrice) {
 		this.biddingPrice = biddingPrice;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
-	
-	
 }

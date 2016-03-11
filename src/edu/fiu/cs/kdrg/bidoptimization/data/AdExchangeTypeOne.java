@@ -6,12 +6,12 @@ package edu.fiu.cs.kdrg.bidoptimization.data;
  *
  */
 
-public enum AdExchangeType {
+public enum AdExchangeTypeOne {
 	AdX(1), TANX(2), Tencent(3);
 
 	private int value;
 
-	private AdExchangeType(int value) {
+	private AdExchangeTypeOne(int value) {
 		this.value = value;
 	}
 }
