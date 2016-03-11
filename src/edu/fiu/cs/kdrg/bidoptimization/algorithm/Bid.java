@@ -1,4 +1,4 @@
-package fiu.cis.kdrg.algorithm;
+package edu.fiu.cs.kdrg.bidoptimization.algorithm;
  
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import fiu.cis.kdrf.core.BidRequest;
+import edu.fiu.cs.kdrg.bidoptimization.data.BidLogOne;
  
 /**
  * Bid class that need to be completed by the contest participants This is the
@@ -48,7 +48,7 @@ public class Bid implements Algorithm {
 	 * 
 	 */
 	@Override
-	public int getBidPrice(BidRequest bidRequest) {
+	public int getBidPrice(BidLogOne bidRequest) {
  
 		int bidPrice = -1;
 		Random r = new Random();

@@ -1,4 +1,4 @@
-package fiu.cis.kdrg.util;
+package edu.fiu.cs.kdrg.bidoptimization.data.ipinyou;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import fiu.cis.kdrf.core.BidRequest;
+import edu.fiu.cs.kdrg.bidoptimization.data.BidLogOne;
 
 /**
  * Load bid request data
@@ -15,13 +15,13 @@ import fiu.cis.kdrf.core.BidRequest;
  *
  */
 
-public class LoadData {
+public class BidLogLoader {
 	
-	public List<BidRequest> readBidRequest(String filename) throws IOException{
+	public List<BidLogOne> readBidRequest(String filename) throws IOException{
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		String line = null;
 		String sep = "\t";
-		List<BidRequest> bidRequestList = new ArrayList<BidRequest>();
+		List<BidLogOne> bidRequestList = new ArrayList<BidLogOne>();
 		int count = 0;
 		while((line = br.readLine()) != null){
 			count++;
@@ -38,32 +38,32 @@ public class LoadData {
 		return bidRequestList;
 	}
 	
-	public BidRequest setBidRequest(String tokens[]) {
-		BidRequest bidRequest = new BidRequest();
+	public BidLogOne setBidRequest(String tokens[]) {
+		BidLogOne bidRequest = new BidLogOne();
 		bidRequest.setBidId(tokens[0]);
 		bidRequest.setTimestamp(tokens[1]);
 		bidRequest.setIpinyouId(tokens[2]);
 		bidRequest.setUserAgent(tokens[3]);
 		bidRequest.setIpAddress(tokens[4]);
-		bidRequest.setRegion(tokens[5]);
-		bidRequest.setCity(tokens[6]);
-		bidRequest.setAdExchange(tokens[7]);
+		bidRequest.setRegion(Integer.parseInt(tokens[5]));
+		bidRequest.setCity(Integer.parseInt(tokens[6]));
+		bidRequest.setAdExchange(Integer.parseInt(tokens[7]));
 		bidRequest.setDomain(tokens[8]);
 		bidRequest.setUrl(tokens[9]);
 		bidRequest.setAnonymousURLID(tokens[10]);
 		bidRequest.setAdSlotID(tokens[11]);
-		bidRequest.setAdSlotWidth(tokens[12]);
-		bidRequest.setAdSlotHeight(tokens[13]);
-		bidRequest.setAdSlotVisibility(tokens[14]);
-		bidRequest.setAdSlotFormat(tokens[15]);
-		bidRequest.setAdSlotFloorPrice(tokens[16]);
+		bidRequest.setAdSlotWidth(Integer.parseInt(tokens[12]));
+		bidRequest.setAdSlotHeight(Integer.parseInt(tokens[13]));
+		bidRequest.setAdSlotVisibility(Integer.parseInt(tokens[14]));
+		bidRequest.setAdSlotFormat(Integer.parseInt(tokens[15]));
+		bidRequest.setAdSlotFloorPrice(Integer.parseInt(tokens[16]));
 		bidRequest.setCreativeID(tokens[17]);
-		bidRequest.setBiddingPrice(tokens[19]);
+		bidRequest.setBiddingPrice(Integer.parseInt(tokens[19]));
 		return bidRequest;
 	}
 	
 	public static void main(String[] args) {
-		LoadData ld = new LoadData();
+		BidLogLoader ld = new BidLogLoader();
 		try {
 			ld.readBidRequest("data/bid.20130311.txt");
 		} catch (IOException e) {
