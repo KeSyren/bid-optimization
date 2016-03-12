@@ -12,27 +12,27 @@ import java.io.Serializable;
  */
 public class BidLogST implements Serializable{
 	
-	private String bidId; 	              //	c0550000008e5a94ac18823d6f275121
-	private String timestamp ;	          //	20130218134701883
-	private String ipinyouId ;	          //	dF_5qwD1UDI
-	private String userAgent;	          //    Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
-	private String ipAddress ;	          //	119.163.222.*
-	private int region;                   //	146
-	private int city;                     //	147
-	private int adExchange;               //	2 AdX (Google DoubleClick AdX), TANX (Alibaba), Baidu(Baidu),Youku(Youku),Tencent (Tencent),Amx(Google Mobile).
-	private String domain ;               //	e80f4ec7f5bfbc9ca416a8c01cd1a049
-	private String url;                   //	hz55b000008e5a94ac18823d6f275121
-	private String anonymousURLID ;       //	Null
-	private String adSlotID;              //	mm_10982364_973726_9023493
-	private int adSlotWidth;              //	300
-	private int adSlotHeight;             //	250
-	private int adSlotVisibility;         //	1
-	private int adSlotFormat;             //	1
-	private int adSlotFloorPrice;         //	(RMB/CPM) (*)	0
-	private String creativeID;            //	f80f4ec7f5bfbc9ca416a8c01cd1a049
-	private int biddingPrice;		      //    300
-	private int advertiserID;             //    2345
-	private String userTags;               //    null
+	private String bidId; 	              //	0 c0550000008e5a94ac18823d6f275121
+	private String timestamp ;	          //	1 20130218134701883
+	private String ipinyouId ;	          //	2 dF_5qwD1UDI
+	private String userAgent;	          //    3 Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+	private String ipAddress ;	          //	4 119.163.222.*
+	private int region;                   //	5 146
+	private int city;                     //	6 147
+	private int adExchange;               //	7 2 AdX (Google DoubleClick AdX), TANX (Alibaba), Baidu(Baidu),Youku(Youku),Tencent (Tencent),Amx(Google Mobile).
+	private String domain ;               //	8 e80f4ec7f5bfbc9ca416a8c01cd1a049
+	private String url;                   //	9  hz55b000008e5a94ac18823d6f275121
+	private String anonymousURLID ;       //	10  Null
+	private String adSlotID;              //	11  mm_10982364_973726_9023493
+	private int adSlotWidth;              //	12 300
+	private int adSlotHeight;             //	13 250
+	private int adSlotVisibility;         //	14 1
+	private int adSlotFormat;             //	15 1
+	private int adSlotFloorPrice;         //	16 (RMB/CPM) (*)	0
+	private String creativeID;            //	17 f80f4ec7f5bfbc9ca416a8c01cd1a049
+	private int biddingPrice;		      //    18 300
+	private int advertiserID;             //    19 2345
+	private String userTags;               //   20 null
 	
 	public String getBidId() {
 		return bidId;
