@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import edu.fiu.cs.kdrg.bidoptimization.data.BidLogOne;
+import edu.fiu.cs.kdrg.bidoptimization.data.BidLog;
  
 /**
  * Bid class that need to be completed by the contest participants This is the
@@ -48,7 +48,7 @@ public class Bid implements Algorithm {
 	 * 
 	 */
 	@Override
-	public int getBidPrice(BidLogOne bidRequest) {
+	public int getBidPrice(BidLog bidRequest) {
  
 		int bidPrice = -1;
 		Random r = new Random();

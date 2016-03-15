@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @author qwang028
  *
  */
-public class BidLogST implements Serializable{
+public class BidLog implements Serializable{
 	
 	private String bidId; 	              //	0 c0550000008e5a94ac18823d6f275121
 	private String timestamp ;	          //	1 20130218134701883

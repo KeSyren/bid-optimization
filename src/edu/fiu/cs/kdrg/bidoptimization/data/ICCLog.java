@@ -8,7 +8,7 @@ import java.io.Serializable;
  *
  */
 
-public class ICCLogST implements Serializable{
+public class ICCLog implements Serializable{
 	
 	private String bidId; 	              //	c0550000008e5a94ac18823d6f275121
 	private String timestamp;	          //	20130218134701883
